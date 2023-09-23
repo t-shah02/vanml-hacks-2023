@@ -22,6 +22,17 @@ Step 5: Launch the Jupyter notebook server from the root directory of the projec
 ```bash
 jupyter notebook
 ```
+Step 6: Setup models and data folders (according to your .env | it is recommended to just copy the same variables in the template.env for good measure)
+Note: The nested directories inside data separate the raw and processed data (in case we need to perform some additional ETL and general cleaning)
+Ex from the root directory:
+```bash
+mkdir data
+cd data
+mkdir raw
+mkdir processed
+cd ..
+mkdir models
+```
 
 # Project folders
 - models: Contains all the serialized models that we train
