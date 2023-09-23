@@ -17,7 +17,7 @@ def load_datafolder(directory_name: str) -> Dict[str, pd.DataFrame]:
 
     for filename in os.listdir(data_folderpath):
         data_filepath = os.path.join(data_folderpath, filename)
-        df = pd.read_csv(data_filepath, parse_dates=[1, 2])
+        df = pd.read_csv(data_filepath, parse_dates=[1, 2, 3, 4])
         dfs[filename] = df
 
     return dfs
