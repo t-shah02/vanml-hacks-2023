@@ -5,7 +5,8 @@ from joblib import dump, load
 import os
 import dotenv
 
-dotenv.config()
+dotenv.load_dotenv()
+
 MODELS_DIRECTORY = os.environ.get("MODELS_DIRECTORY", "./models")
 
 def load_model(filename: str) -> Pipeline:

@@ -3,7 +3,8 @@ import dotenv
 import os
 import pandas as pd
 
-dotenv.config()
+dotenv.load_dotenv()
+
 DATA_DIRECTORY = os.environ.get("DATA_DIRECTORY", './data')
 
 def load_dataset(directory_name: str, filename: str) -> pd.DataFrame:
