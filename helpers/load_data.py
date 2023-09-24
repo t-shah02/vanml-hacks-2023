@@ -17,7 +17,11 @@ def load_datafolder(directory_name: str) -> Dict[str, pd.DataFrame]:
 
     for filename in os.listdir(data_folderpath):
         data_filepath = os.path.join(data_folderpath, filename)
-        df = pd.read_csv(data_filepath, parse_dates=[1, 2, 3, 4])
+        df = pd.read_csv(data_filepath)
         dfs[filename] = df
 
     return dfs
+
+def load_datetimes(df: pd.DataFrame, dt_cols) -> pd.DataFrame:
+    df[dt_cols] = df[dt_cols].apply(pd.to_datetime)
+    return df

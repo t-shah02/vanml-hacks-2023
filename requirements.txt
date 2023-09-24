@@ -6,3 +6,4 @@ xgboost
 scikit-learn
 jupyter
 python-dotenv
+seaborn
